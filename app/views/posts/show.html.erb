@@ -17,6 +17,11 @@
   <%= raw @post.content.nl2br %>
 </p>
 
+<p>
+  <b>Tags:</b>
+  <%= @post.tags.map { |t| t.name }.join(", ") %>
+</p>
+
 <h2>Comments</h2>
 <%= render @post.comments %>
 
